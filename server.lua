@@ -2,7 +2,6 @@ local ESX = exports['es_extended']:getSharedObject()
 
 local reviveTimer = 60 -- 1 minutes in seconds change the time here
 
--- Function to check if an ambulance job player is online
 local function isAmbulanceJobOnline()
     local players = ESX.GetPlayers()
     for i = 1, #players, 1 do
@@ -14,7 +13,6 @@ local function isAmbulanceJobOnline()
     return false
 end
 
--- Event to check and revive player after timer
 RegisterNetEvent('autoRevive:checkPlayerDeath')
 AddEventHandler('autoRevive:checkPlayerDeath', function()
     local playerId = source
